@@ -10,3 +10,5 @@ require_relative '../lib/pet_api'
 require_relative '../lib/pet_cli'
 # require_relative '../lib/planets'
 # require_relative '../lib/details'
+
+PetCli.new.main
