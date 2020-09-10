@@ -38,6 +38,7 @@ class PetCli
         else
           exit
         end
+
       elsif search = 'Species name in hash'
         puts "What species would you like to look up?"
         print "> "
@@ -51,6 +52,7 @@ class PetCli
         else
           exit
         end
+
       elsif search = 'location name in hash'
         puts "What location would you like to look up?"
         print "> "
@@ -64,15 +66,16 @@ class PetCli
         else
           exit
         end
+
       elsif search = 'Lost name in hash'
         puts "What lost animal would you like to look up?"
         print "> "
         input = $stdin.gets.chomp
         if input = "enter an option here for the breed of animal "
           puts "Happy Hunting!"
-        elsif input = "enter an option here for the breed of animal "
+        elsif input = "enter an option here for the species of animal "
           puts "Happy Hunting!"
-        elsif input = "enter an option here for the breed of animal "
+        elsif input = "enter an option here for the ??? of animal "
           puts "Happy Hunting!"
         else
           exit
@@ -82,21 +85,32 @@ class PetCli
   end
 
   def greeting
+    #a method that greets the user and asks for the users name.
     puts "Hello, What is your name?"
     print "> "
+    #gets the users input for their name that is passed
     name = $stdin.gets.chomp
+    #print a proper greeting for the user 
     puts "Hello #{name}, Welcome to the pet finder!"
   end
 
-  def method
-
+  def list_options
+    Pets.all.each.with_index(1) { | animal, index | puts "#{index}. #{animal}"}
+      #     #This gives all of the planets an index
+      #     Planets.all.each.with_index(1) {| planet, i | puts "#{i}. #{planet.name}"}
   end
 
-  def method
-
+  def found
+    puts "Yay, You found me. I am so happy to see you."
   end
 
-  def method
-    
+  def congratulations
+    #going to attempt to  create a terminal image for once the pet is 
+    # found or located that is eitehr missing or rescued
   end
+
+  def again
+    puts "Please check back soon: Our data is updated regularly"
+  end
+
 end
