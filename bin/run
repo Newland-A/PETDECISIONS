@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+require 'open-uri'
+require 'rest-client'
+require 'nokogiri'
+require 'HTTParty'
+
+require_relative '../lib/pet_api'
+require_relative '../lib/pet_cli'
+# require_relative '../lib/planets'
+# require_relative '../lib/details'
